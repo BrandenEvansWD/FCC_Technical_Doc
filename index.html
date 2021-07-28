@@ -5,34 +5,139 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Grid Documentation</title>
+    <title>Git Basics</title>
     <link rel="stylesheet" href="app.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="hamburger.css" rel="stylesheet">
-    <script>
-        // Look for .hamburger
-        var hamburger = document.querySelector(".hamburger");
-        // On click
-        hamburger.addEventListener("click", function () {
-            // Toggle class "is-active"
-            hamburger.classList.toggle("is-active");
-            // Do something else, like open/close menu
-        });
-    </script>
-
+    <link rel="stylesheet" href="/FCC_Technical_Doc/fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
+    <div class="grid-container">
+
+        <!-- /* ======================================== */ -->
+        <!-- /*                  NAVBAR                  */ -->
+        <!-- /* ======================================== */ -->
+
+        <nav id="nav-bar">
+            <i class="fab fa-github" id="github-logo"></i>
+            <header>Git Basics</header>
+
+            <div class="nav-container">
+
+                <div class="icon-link">
+                    <a href="#"><i class="fab fa-git"></i></a>
+                </div>
+                <span class="title">Git Basics</span>
+
+                <div class="drop">
+                    <ul class="drop_menu">
+                        <li><a href='javascript:void(0)'><i class="fas fa-bars" id="hamburger"></i></a>
+                            <ul>
+                                <li><a href='#whats-git'>What is Git?</a></li>
+                                <li><a href='#'>Sub Link 2</a></li>
+                                <li><a href='#'>Sub Link 3</a></li>
+                                <li><a href='#'>Sub Link 4</a></li>
+                                <li><a href='#'>Sub Link 5</a></li>
+                                <li><a href='#'>Sub Link 6</a></li>
+                                <li><a href='#'>Sub Link 7</a></li>
+                                <li><a href='#'>Sub Link 8</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                </ul>
+                </ul>
+
+            </div>
+    </div>
+    </nav>
+
     <!-- /* ======================================== */ -->
-    <!-- /*                  SECTION                 */ -->
+    <!-- /*                MAIN CONTENT              */ -->
     <!-- /* ======================================== */ -->
 
-    <button class="hamburger hamburger--squeeze" type="button">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </button>
+    <div class="content">
+
+        <div class="intro">
+            <p>
+                The point of this technical document is to educate the reader about some of the basics to using git
+                and github. This is, by no-means a full documentation of git, but merely touches on the very basic
+                functions.
+            </p>
+        </div>
+
+        <section class="what-is-git" id="what-is-git">
+            <a id="whats-git"></a>
+            <h2>What Is Git?</h2>
+            <div class="content-container">
+                <p>
+                    Git is one of the most widely used version control &#40;VCS&#41; systems in the world today. Git is
+                    an actively-maintained open source project developed by the creator of the Linux operating system,
+                    Linus Torvalds.
+                    <span class="spacer"></span>
+                    Git is considered a distributed version control system &#40;DVCS&#41;, meaning every
+                    developer on a project has a working copy of code, which is also a repository that can contain all
+                    changes made to a project by individual team members.
+                </p>
+        </section>
+
+        <section class="">
+            <h2>Getting Started With Git</h2>
+            <div class="content-container">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, impedit labore quia excepturi
+                    voluptas tempora, sit ex dolores possimus laborum quos eaque quibusdam consectetur similique
+                    libero
+                    odit culpa pariatur accusantium.
+                    Ea sapiente modi maiores neque optio expedita amet, eum unde at veritatis consequatur recusandae
+                    dignissimos nostrum aliquam, magnam excepturi, quis aliquid! Labore perspiciatis iste unde
+                    molestiae
+                    omnis hic excepturi quo.
+                    Maiores molestiae atque minima itaque doloribus nostrum quo eveniet odit, hic autem dolores,
+                    totam
+                    aliquam, delectus reprehenderit necessitatibus praesentium vero ratione! Eos atque rerum
+                    reiciendis
+                    laborum explicabo esse eum id?
+                    Iusto quis maxime facere sapiente ad maiores fugit eum aliquid asperiores velit. Praesentium
+                    illo
+                    voluptate quidem quia animi numquam doloremque nulla in fugit suscipit sed, voluptatum quo ipsa
+                    harum dicta?</p>
+        </section>
+
+        <section class="">
+            <h2>Getting Started With Git</h2>
+            <div class="content-container">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, impedit labore quia excepturi
+                    voluptas tempora, sit ex dolores possimus laborum quos eaque quibusdam consectetur similique
+                    libero
+                    odit culpa pariatur accusantium.
+                    Ea sapiente modi maiores neque optio expedita amet, eum unde at veritatis consequatur recusandae
+                    dignissimos nostrum aliquam, magnam excepturi, quis aliquid! Labore perspiciatis iste unde
+                    molestiae
+                    omnis hic excepturi quo.
+                    Maiores molestiae atque minima itaque doloribus nostrum quo eveniet odit, hic autem dolores,
+                    totam
+                    aliquam, delectus reprehenderit necessitatibus praesentium vero ratione! Eos atque rerum
+                    reiciendis
+                    laborum explicabo esse eum id?
+                    Iusto quis maxime facere sapiente ad maiores fugit eum aliquid asperiores velit. Praesentium
+                    illo
+                    voluptate quidem quia animi numquam doloremque nulla in fugit suscipit sed, voluptatum quo ipsa
+                    harum dicta?</p>
+        </section>
+    </div>
+
+    <section class="footer">
+        <a href="#">Link</a> |
+        <a href="#">Link</a> |
+        <a href="#">Link</a> |
+        <a href="#">Link</a>
+    </section>
+    </div>
+
 
 </body>
 
