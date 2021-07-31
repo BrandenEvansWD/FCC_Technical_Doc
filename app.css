@@ -39,11 +39,23 @@ button {
 h2 {
     font-family: 'Raleway', sans-serif;
     color: rgb(207, 30, 110);
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: bold;
     text-align: center;
     margin-top: 6rem;
+    margin-bottom: 3rem;
+}
+
+h3 {
+    font-family: 'Raleway', sans-serif;
+    color: rgba(58, 12, 163, 1);
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 1rem;
+    margin-top: 4rem;
     margin-bottom: 2rem;
+    border-bottom: 3px solid rgba(58, 12, 163, 1);
 }
 
 :root {
@@ -67,7 +79,7 @@ h2 {
     /* ======================================== */
     /*                 NAVIGATION               */
     /* ======================================== */
-    #nav-bar {
+    #navbar {
         /* background: linear-gradient(180deg, rgba(247, 37, 133, 1) 0%, rgba(58, 12, 163, 1) 100%); */
         display: flex;
         width: 100%;
@@ -168,12 +180,12 @@ h2 {
     p::first-letter {
         color: rgba(247, 37, 133, 1);
         font-weight: bold;
-        font-size: 7rem;
+        font-size: 4rem;
         float: left;
-        line-height: 60px;
+        line-height: 30px;
         padding-right: 4px;
         padding-left: 0px;
-        padding-top: 6px;
+        padding-top: 0px;
     }
     section a {
         text-decoration: none;
@@ -205,6 +217,16 @@ h2 {
     .fa-arrow-down {
         font-size: 2rem;
         color: rgba(58, 12, 163, 1);
+    }
+    code {
+        display: block;
+        background-color: rgb(200, 200, 200);
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        margin-bottom: 3rem;
+        text-align: left;
+        overflow: scroll;
     }
     /* ======================================== */
     /*                    FOOTER                */

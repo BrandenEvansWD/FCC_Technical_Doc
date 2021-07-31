@@ -23,7 +23,7 @@
         <!-- /*                  NAVBAR                  */ -->
         <!-- /* ======================================== */ -->
 
-        <nav id="nav-bar">
+        <nav id="navbar">
             <i class="fab fa-github" id="github-logo"></i>
             <header id="topic">Git Basics</header>
 
@@ -34,33 +34,33 @@
                 </div>
                 <span class="title">Git Basics</span>
 
-                <body>
-                    <div class="menu-wrap">
-                        <input type="checkbox" class="toggler">
-                        <div class="hamburger">
-                            <div></div>
-                        </div>
-                        <div class="menu">
+                <div class="menu-wrap">
+                    <input type="checkbox" class="toggler">
+                    <div class="hamburger">
+                        <div></div>
+                    </div>
+                    <div class="menu">
+                        <div>
                             <div>
-                                <div>
-                                    <ul>
-                                        <li><a href="#whats-git" class="nav-link">What Is Git?</a></li>
-                                        <li><a href="#getting-started-with-git" class="nav-link">Getting Started With
-                                                Git</a></li>
-                                        <li><a href="#" class="nav-link">Link</a></li>
-                                        <li><a href="#" class="nav-link">Link</a></li>
-                                        <li><a href="#" class="nav-link">Link</a></li>
-                                    </ul>
-                                </div>
+                                <ul>
+                                    <li><a href="#what_is_git" class="nav-link">What Is Git</a></li>
+                                    <li><a href="#getting_started_with_git" class="nav-link">Getting Started With
+                                            Git</a></li>
+                                    <li><a href="#creating_a_repository" class="nav-link">Creating a Repository</a>
+                                    </li>
+                                    <li><a href="#staging_area" class="nav-link">Staging Area</a></li>
+                                    <li><a href="#commit_and_push" class="nav-link">Commit And Push</a></li>
+                                </ul>
                             </div>
                         </div>
-
                     </div>
+
+                </div>
             </div>
         </nav>
 
         <!-- /* ======================================== */ -->
-        <!-- /*                MAIN CONTENT              */ -->
+        <!-- /*                   INTRO                  */ -->
         <!-- /* ======================================== */ -->
 
         <main id="main-doc">
@@ -68,12 +68,18 @@
             <div class="intro">
                 <p>
                     The point of this technical document is to educate the reader about some of the basics to using git
-                    and github. This is, by no-means a full documentation of git, but merely touches on the very basic
+                    and github. It is assumed the reader has some basic understanding of the terminal and the ability to
+                    navigate the GitHub webpage This is, by no-means a full documentation of git, but merely touches on
+                    the very basic
                     functions.
                 </p>
             </div>
 
-            <section class="main-section" id="what-is-git">
+            <!-- /* ======================================== */ -->
+            <!-- /*                WHAT IS GIT?             */ -->
+            <!-- /* ======================================== */ -->
+
+            <section class="main-section" id="what_is_git">
                 <header>What Is Git</header>
                 <a id="whats-git"></a>
                 <div class="content-container">
@@ -106,111 +112,185 @@
                     </p>
             </section>
 
-            <section class="main-section" id="getting-started-with-git">
+            <!-- /* ======================================== */ -->
+            <!-- /*         GETTING STARTER WITH GIT         */ -->
+            <!-- /* ======================================== */ -->
+
+            <section class="main-section" id="getting_started_with_git">
                 <header>Getting Started With Git</header>
                 <div class="content-container">
                     <p>
                         In this documentation, we are going to assume you have Git setup and configured on your machine
-                        already.
+                        already, along with an account created on <a href="github.com">Github.com</a>.
                         If you haven't yet installed and setup git, you can follow the guide at <a
                             href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git"
                             target="_blank">git-scm.com</a>. which
                         also has plenty of information not listed in this documentation.
                     </p>
+
                     <h2>The Git Workflow</h2>
                     <p>
-                        While using Git, you will quickly realize there is a very standard workflow:
+                        While using Git, you will quickly realize there is a very standard workflow. Select a link or
+                        continue to learn more about each section.
                     </p>
                     <ol>
-                        <li><a href="#">Working Directory</a></li>
+                        <li><a href="#working-directory">Working Directory</a></li>
                         <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                        <li><a href="#">Staging Area</a></li>
+                        <li><a href="#stage-area">Staging Area</a></li>
                         <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                        <li><a href="#">Local Repo &#40;HEAD&#41;</a></li>
+                        <li><a href="#local-repo">Local Repo &#40;HEAD&#41;</a></li>
                         <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                        <li><a href="#">Remote Repo &#40;MAIN&#41;</a></li>
+                        <li><a href="#remote-repo">Remote Repo &#40;MAIN&#41;</a></li>
                         <i class="fa fa-arrow-down" aria-hidden="true"></i>
                         <li>Repeat</li>
                     </ol>
+
+                    <h3 id="working-directory">Working Directory</h3>
                     <p>
-                        In the following sections, we will go into more detail about the steps of the workflow, along
-                        with
-                        Git commands to perform the required tasks.
+                        We begin with the first part of the workflow, the working directory, which is the area you are
+                        currently working, and where your files are saved.
+                        Changes in your working directory aren't <i>saved</i> by Git just yet. You will later need to
+                        add the files to be tracked by Git.
+                    </p>
+
+                    <h3 id="stage-area">Staging Area</h3>
+                    <p>
+                        Second up in the workflow is the staging area, which is when Git begins tracking and saving
+                        changes in your files.
+                        When you add a file to the staging area, Git takes a snapshot of the changes made at that
+                        current time.
+                        If you modify a file after adding it to the staging area, Git will not recognize the changes
+                        made until the files
+                        that were modified are added back to the staging area.
+                    </p>
+
+                    <h3 id="local-repo">Local Repo</h3>
+                    <p>
+                        The local repository or repo, contains everything in your Git directory. It saves snapshots of
+                        all of your commits and changes. Files from your staging area are added to the local repo after
+                        you commit your changes.
+                    </p>
+
+                    <h3 id="remote-repo">Remote Repo</h3>
+                    <p>
+                        Finally, comes the remote repository. In this documentation, we are using <a
+                            href="github.com">GitHub</a> as our remote repository.
+                        It's the same idea as a local repo, but gives the extra peace-of-mind of not only having a
+                        backup of your files in a second location,
+                        but also allows you to work on projects with other developers remotely.
                     </p>
             </section>
 
-            <section class="main-section">
-                <header>Getting Started With Git</header>
+            <!-- /* ======================================== */ -->
+            <!-- /*                CREATE A REPO             */ -->
+            <!-- /* ======================================== */ -->
+
+            <section class="main-section" id="creating_a_repository">
+                <header>Creating a Repository</header>
                 <div class="content-container">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, impedit labore quia excepturi
-                        voluptas tempora, sit ex dolores possimus laborum quos eaque quibusdam consectetur similique
-                        libero
-                        odit culpa pariatur accusantium.
-                        Ea sapiente modi maiores neque optio expedita amet, eum unde at veritatis consequatur recusandae
-                        dignissimos nostrum aliquam, magnam excepturi, quis aliquid! Labore perspiciatis iste unde
-                        molestiae
-                        omnis hic excepturi quo.
-                        Maiores molestiae atque minima itaque doloribus nostrum quo eveniet odit, hic autem dolores,
-                        totam
-                        aliquam, delectus reprehenderit necessitatibus praesentium vero ratione! Eos atque rerum
-                        reiciendis
-                        laborum explicabo esse eum id?
-                        Iusto quis maxime facere sapiente ad maiores fugit eum aliquid asperiores velit. Praesentium
-                        illo
-                        voluptate quidem quia animi numquam doloremque nulla in fugit suscipit sed, voluptatum quo ipsa
-                        harum dicta?</p>
+                    <p>
+                        The first step in creating a new project is to setup a project directory. You have the option of
+                        either setting up the repository locally, or you can setup your remote repository first. Below
+                        we will go over the differences in the different options.
+                    </p>
+
+                    <h2>Local Repo</h2>
+                    <p>
+                        The first option you have is to create your repository locally. This can be helpful if you don't
+                        currently have an internet connection or you have a project you've already created and now want
+                        to store it remotely.
+                    </p>
+                    <h3>Create A New Directory</h3>
+                    <p>
+                        The first option we have is to create a new directory from scratch and turn it into a
+                        repository. Start by creating a new folder or directory for your project. Using your terminal,
+                        navigate to your new directory
+                        and enter the following command to initialize the repository:
+                        <code>$ git init</code>
+                    </p>
+                    <h3>Existing Project</h3>
+                    <p>
+                        Use your terminal to navigate to your main project folder that you would like to turn into a
+                        repository and enter the same code as before:
+                        <code>$git init</code>
+                    </p>
+
+                    <h2>Connect to GitHub</h2>
+                    <p>
+                        Now that you have a repository created, the next step is to connect it with your GitHub account.
+                        Login to GitHub and create a new repository. You will be given a few options to setup an
+                        exhisting local directory, which one you choose will vary on how you previously initially setup
+                        Git.
+                        In this documentation we are going to assume you set up SSH so you won't need a password for
+                        every push to GitHub.
+                        <code>$ git remote add origin git@github.com:username/new_repo</code>
+                        Your local repository is now connected to GitHub!
+                    </p>
             </section>
 
-            <section class="main-section">
-                <header>Getting Started With Git</header>
+            <!-- /* ======================================== */ -->
+            <!-- /*                STAGING AREA              */ -->
+            <!-- /* ======================================== */ -->
+
+            <section class="main-section" id="staging_area">
+                <header>Staging Area</header>
                 <div class="content-container">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, impedit labore quia excepturi
-                        voluptas tempora, sit ex dolores possimus laborum quos eaque quibusdam consectetur similique
-                        libero
-                        odit culpa pariatur accusantium.
-                        Ea sapiente modi maiores neque optio expedita amet, eum unde at veritatis consequatur recusandae
-                        dignissimos nostrum aliquam, magnam excepturi, quis aliquid! Labore perspiciatis iste unde
-                        molestiae
-                        omnis hic excepturi quo.
-                        Maiores molestiae atque minima itaque doloribus nostrum quo eveniet odit, hic autem dolores,
-                        totam
-                        aliquam, delectus reprehenderit necessitatibus praesentium vero ratione! Eos atque rerum
-                        reiciendis
-                        laborum explicabo esse eum id?
-                        Iusto quis maxime facere sapiente ad maiores fugit eum aliquid asperiores velit. Praesentium
-                        illo
-                        voluptate quidem quia animi numquam doloremque nulla in fugit suscipit sed, voluptatum quo ipsa
-                        harum dicta?</p>
+                    <p>
+                        Now that you have a repository setup and linked to your GitHub account, we can move on to the
+                        next part of the workflow; staging.
+                        We discussed staging in a previous section so we know that is the step where we tell git to
+                        start tracking changes made to files.
+                        We can do so with a couple options:
+                        <code>$ git add filename</code>
+                        which will add a specific file you select. You can also add multiple files by spacing the names
+                        out. Or you can add all of the files using:
+                        <code>$ git add .</code>
+                        Where the period is used to specify all files.
+                        Lastly you can check which files you have added to be staged by using the command:
+                        <code>$ git status</code>
+                    </p>
             </section>
 
-            <section class="main-section">
-                <header>Getting Started With Git</header>
+            <!-- /* ======================================== */ -->
+            <!-- /*              COMMIT CHANGES              */ -->
+            <!-- /* ======================================== */ -->
+
+            <section class="main-section" id="commit_and_push">
+                <header>Commit And Push</header>
                 <div class="content-container">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, impedit labore quia excepturi
-                        voluptas tempora, sit ex dolores possimus laborum quos eaque quibusdam consectetur similique
-                        libero
-                        odit culpa pariatur accusantium.
-                        Ea sapiente modi maiores neque optio expedita amet, eum unde at veritatis consequatur recusandae
-                        dignissimos nostrum aliquam, magnam excepturi, quis aliquid! Labore perspiciatis iste unde
-                        molestiae
-                        omnis hic excepturi quo.
-                        Maiores molestiae atque minima itaque doloribus nostrum quo eveniet odit, hic autem dolores,
-                        totam
-                        aliquam, delectus reprehenderit necessitatibus praesentium vero ratione! Eos atque rerum
-                        reiciendis
-                        laborum explicabo esse eum id?
-                        Iusto quis maxime facere sapiente ad maiores fugit eum aliquid asperiores velit. Praesentium
-                        illo
-                        voluptate quidem quia animi numquam doloremque nulla in fugit suscipit sed, voluptatum quo ipsa
-                        harum dicta?</p>
+                    <p>
+                        The final half of the workflow will be to commit and push your files.
+                    </p>
+                    <h2>Commit</h2>
+                    <p>
+                        We have our repository setup and files added to our staging area, it is time to commit
+                        those changes to the local repo or the HEAD:
+                        <code>$ git commit</code>
+                        The best practice method of doing a commit is to add a brief description to the commit:
+                        <code>$ git commit -m "changes"</code>
+                        The newest file changes have now been updated in your local repository.
+                    </p>
+                    <h2>Push</h2>
+                    <p>
+                        By pushing your files to your GitHub repository, you are creating a remote backup of your image
+                        and gaining the ability to work on projects with others. We won't be covering branchs/forks in
+                        this documentation, so that leads us to the last command:
+                        <code>$ git push</code>
+                        Your files are now backed up remotely now as well, so if your computer ever crashes or dies on
+                        you; you will always have a copy of your work.
+                        <span class="spacer"></span>
+                        Thank you for taking the time to read this technical document and I hope it was able to help
+                        give
+                        some clarity to those looking to learn the basics of Git.
+                    </p>
             </section>
     </div>
 
     <section class="footer">
-        <a href="#">Link</a> |
-        <a href="#">Link</a> |
-        <a href="#">Link</a> |
-        <a href="#">Link</a>
+        <a href="#">About |</a>
+        <a href="#">ToS |</a>
+        <a href="#">Privacy |</a>
+        <a href="#">Legal</a>
     </section>
     </div>
 
