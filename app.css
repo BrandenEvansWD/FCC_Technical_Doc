@@ -27,7 +27,7 @@ body {
     height: 100%;
 }
 
-ol, ul {
+ul {
     list-style: none;
 }
 
@@ -36,12 +36,14 @@ button {
     padding: 0;
 }
 
-h3 {
+h2 {
     font-family: 'Raleway', sans-serif;
     color: rgb(207, 30, 110);
     font-size: 3rem;
     font-weight: bold;
-    position: relative;
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
 }
 
 :root {
@@ -60,7 +62,7 @@ h3 {
         width: 100%;
         grid-template-columns: minmax(150px, 1fr);
         grid-template-rows: auto 1fr auto;
-        grid-template-areas: "nav" "content" "footer";
+        grid-template-areas: "nav" "main" "footer";
     }
     /* ======================================== */
     /*                 NAVIGATION               */
@@ -84,7 +86,7 @@ h3 {
         font-size: 10rem;
         margin-bottom: 4rem;
     }
-    header {
+    #topic {
         display: block;
         color: white;
         font-size: 6rem;
@@ -124,17 +126,17 @@ h3 {
     /* ======================================== */
     /*               MAIN CONTENT               */
     /* ======================================== */
-    .content {
+    #main-doc {
         color: black;
-        background: linear-gradient(104deg, rgba(0, 255, 235, 1) 0%, rgba(7, 58, 187, 1) 100%);
+        background: linear-gradient(90deg, rgba(0, 255, 235, 1) 0%, rgba(7, 58, 187, 1) 100%);
         ;
-        grid-area: content;
+        grid-area: main;
     }
     .content-container {
         background: white;
-        padding: 2rem 1.5rem 6rem;
+        padding: 2rem 1.5rem 4rem;
     }
-    h2 {
+    header {
         font-size: 4.6rem;
         text-align: center;
         color: white;
@@ -152,7 +154,7 @@ h3 {
     #whats-git {
         display: block;
         position: relative;
-        top: -170px;
+        top: -260px;
         visibility: hidden;
     }
     p {
@@ -161,6 +163,7 @@ h3 {
         line-height: 4rem;
         text-align: justify;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-bottom: 3rem;
     }
     p::first-letter {
         color: rgba(247, 37, 133, 1);
@@ -172,10 +175,36 @@ h3 {
         padding-left: 0px;
         padding-top: 6px;
     }
+    section a {
+        text-decoration: none;
+        color: rgba(247, 37, 133, 1);
+        font-style: italic;
+        transition: all .5s ease;
+        cursor: pointer;
+    }
+    section a:hover {
+        text-decoration: underline;
+        color: rgba(58, 12, 163, 1);
+    }
     .spacer {
         display: block;
         width: 100%;
-        height: 4rem;
+        height: 3rem;
+    }
+    ol {
+        width: 100%;
+        text-align: center;
+        list-style-position: inside;
+        margin-bottom: 3rem;
+    }
+    ol li {
+        font-size: 2rem;
+        line-height: 4rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .fa-arrow-down {
+        font-size: 2rem;
+        color: rgba(58, 12, 163, 1);
     }
     /* ======================================== */
     /*                    FOOTER                */

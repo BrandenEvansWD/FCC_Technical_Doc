@@ -25,7 +25,7 @@
 
         <nav id="nav-bar">
             <i class="fab fa-github" id="github-logo"></i>
-            <header>Git Basics</header>
+            <header id="topic">Git Basics</header>
 
             <div class="nav-container">
 
@@ -44,10 +44,12 @@
                             <div>
                                 <div>
                                     <ul>
-                                        <li><a href="#whats-git">What Is Git?</a></li>
-                                        <li><a href="#">Link</a></li>
-                                        <li><a href="#">Link</a></li>
-                                        <li><a href="#">Link</a></li>
+                                        <li><a href="#whats-git" class="nav-link">What Is Git?</a></li>
+                                        <li><a href="#getting-started-with-git" class="nav-link">Getting Started With
+                                                Git</a></li>
+                                        <li><a href="#" class="nav-link">Link</a></li>
+                                        <li><a href="#" class="nav-link">Link</a></li>
+                                        <li><a href="#" class="nav-link">Link</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -61,7 +63,7 @@
         <!-- /*                MAIN CONTENT              */ -->
         <!-- /* ======================================== */ -->
 
-        <div class="content">
+        <main id="main-doc">
 
             <div class="intro">
                 <p>
@@ -71,9 +73,9 @@
                 </p>
             </div>
 
-            <section class="what-is-git" id="what-is-git">
+            <section class="main-section" id="what-is-git">
+                <header>What Is Git</header>
                 <a id="whats-git"></a>
-                <h2>What Is Git?</h2>
                 <div class="content-container">
                     <p>
                         Git is one of the most widely used version control &#40;VCS&#41; systems in the world today. Git
@@ -87,10 +89,58 @@
                         all
                         changes made to a project by individual team members.
                     </p>
+                    <p>
+                        You can think of Git like a more powerful option of saving a document. Unlike a saved document,
+                        <i>saving</i> with git records thhe differences in files and keeps a record of each <i>save</i>.
+                        You can review changes, examine how a project has grown, and restore previous versions of your
+                        code.
+                        Paired with GitHub, you can show off your work or collaborate on projects with other devlopers.
+                        <span class="spacer"></span>
+                        By pairing Git and Github, you not only keep a backup and change-log of your code on your
+                        machine and remotely,
+                        but you also keep a day-by-day log of your coding habits. This is useful to add to your
+                        portfolio to show potential
+                        companies or clients your work. It is very important to get a good understanding of how Git and
+                        Github work as Git is
+                        considered to be an essential skill for modern developers.
+                    </p>
             </section>
 
-            <section class="">
-                <h2>Getting Started With Git</h2>
+            <section class="main-section" id="getting-started-with-git">
+                <header>Getting Started With Git</header>
+                <div class="content-container">
+                    <p>
+                        In this documentation, we are going to assume you have Git setup and configured on your machine
+                        already.
+                        If you haven't yet installed and setup git, you can follow the guide at <a
+                            href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git"
+                            target="_blank">git-scm.com</a>. which
+                        also has plenty of information not listed in this documentation.
+                    </p>
+                    <h2>The Git Workflow</h2>
+                    <p>
+                        While using Git, you will quickly realize there is a very standard workflow:
+                    </p>
+                    <ol>
+                        <li><a href="#">Working Directory</a></li>
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                        <li><a href="#">Staging Area</a></li>
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                        <li><a href="#">Local Repo &#40;HEAD&#41;</a></li>
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                        <li><a href="#">Remote Repo &#40;MAIN&#41;</a></li>
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                        <li>Repeat</li>
+                    </ol>
+                    <p>
+                        In the following sections, we will go into more detail about the steps of the workflow, along
+                        with
+                        Git commands to perform the required tasks.
+                    </p>
+            </section>
+
+            <section class="main-section">
+                <header>Getting Started With Git</header>
                 <div class="content-container">
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, impedit labore quia excepturi
                         voluptas tempora, sit ex dolores possimus laborum quos eaque quibusdam consectetur similique
@@ -111,8 +161,8 @@
                         harum dicta?</p>
             </section>
 
-            <section class="">
-                <h2>Getting Started With Git</h2>
+            <section class="main-section">
+                <header>Getting Started With Git</header>
                 <div class="content-container">
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, impedit labore quia excepturi
                         voluptas tempora, sit ex dolores possimus laborum quos eaque quibusdam consectetur similique
@@ -132,16 +182,39 @@
                         voluptate quidem quia animi numquam doloremque nulla in fugit suscipit sed, voluptatum quo ipsa
                         harum dicta?</p>
             </section>
-        </div>
 
-        <section class="footer">
-            <a href="#">Link</a> |
-            <a href="#">Link</a> |
-            <a href="#">Link</a> |
-            <a href="#">Link</a>
-        </section>
+            <section class="main-section">
+                <header>Getting Started With Git</header>
+                <div class="content-container">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, impedit labore quia excepturi
+                        voluptas tempora, sit ex dolores possimus laborum quos eaque quibusdam consectetur similique
+                        libero
+                        odit culpa pariatur accusantium.
+                        Ea sapiente modi maiores neque optio expedita amet, eum unde at veritatis consequatur recusandae
+                        dignissimos nostrum aliquam, magnam excepturi, quis aliquid! Labore perspiciatis iste unde
+                        molestiae
+                        omnis hic excepturi quo.
+                        Maiores molestiae atque minima itaque doloribus nostrum quo eveniet odit, hic autem dolores,
+                        totam
+                        aliquam, delectus reprehenderit necessitatibus praesentium vero ratione! Eos atque rerum
+                        reiciendis
+                        laborum explicabo esse eum id?
+                        Iusto quis maxime facere sapiente ad maiores fugit eum aliquid asperiores velit. Praesentium
+                        illo
+                        voluptate quidem quia animi numquam doloremque nulla in fugit suscipit sed, voluptatum quo ipsa
+                        harum dicta?</p>
+            </section>
     </div>
 
+    <section class="footer">
+        <a href="#">Link</a> |
+        <a href="#">Link</a> |
+        <a href="#">Link</a> |
+        <a href="#">Link</a>
+    </section>
+    </div>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 </body>
 
