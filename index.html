@@ -69,7 +69,7 @@
                 <p>
                     The point of this technical document is to educate the reader about some of the basics to using git
                     and github. It is assumed the reader has some basic understanding of the terminal and the ability to
-                    navigate the GitHub webpage This is, by no-means a full documentation of git, but merely touches on
+                    navigate the GitHub webpage. This is, by no-means a full documentation of git, but merely touches on
                     the very basic
                     functions.
                 </p>
@@ -97,7 +97,7 @@
                     </p>
                     <p>
                         You can think of Git like a more powerful option of saving a document. Unlike a saved document,
-                        <i>saving</i> with git records thhe differences in files and keeps a record of each <i>save</i>.
+                        <i>saving</i> with git records the differences in files and keeps a record of each <i>save</i>.
                         You can review changes, examine how a project has grown, and restore previous versions of your
                         code.
                         Paired with GitHub, you can show off your work or collaborate on projects with other devlopers.
@@ -212,7 +212,7 @@
                     <p>
                         Use your terminal to navigate to your main project folder that you would like to turn into a
                         repository and enter the same code as before:
-                        <code>$git init</code>
+                        <code>$ git init</code>
                     </p>
 
                     <h2>Connect to GitHub</h2>
@@ -225,6 +225,15 @@
                         every push to GitHub.
                         <code>$ git remote add origin git@github.com:username/new_repo</code>
                         Your local repository is now connected to GitHub!
+                    </p>
+
+                    <h2>Remote Repo</h2>
+                    <p>
+                        The other option you have is to copy a repository that is already on GitHub that you created
+                        previously:
+                        <code>$ git clone git@github.com:username/repo</code>
+                        This copies, or clones all of the contents of the directory and creates a local repository on
+                        your machine.
                     </p>
             </section>
 
@@ -272,7 +281,7 @@
                     </p>
                     <h2>Push</h2>
                     <p>
-                        By pushing your files to your GitHub repository, you are creating a remote backup of your image
+                        By pushing your files to your GitHub repository, you are creating a remote backup of your code
                         and gaining the ability to work on projects with others. We won't be covering branchs/forks in
                         this documentation, so that leads us to the last command:
                         <code>$ git push</code>
